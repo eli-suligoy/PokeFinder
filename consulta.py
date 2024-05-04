@@ -7,6 +7,7 @@ def consultar(dato):
     nombre=datos["name"]
     foto=datos["sprites"]["front_default"]
     resultado={"nombre":nombre,"foto":foto}
+    print(resultado, sep=" ")
     return resultado
 
 if __name__== '__main__':
