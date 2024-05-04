@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask import render_template,request,redirect
 from flask import send_from_directory
+from consulta import consultar
 
 app= Flask(__name__,template_folder='templates')
 
