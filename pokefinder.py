@@ -12,9 +12,13 @@ def css_link(archivocss):
     return send_from_directory(os.path.join('templates/css/'),archivocss)
 
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
-    return render_template('/index.html')
+    if request.method == 'POST':
+        pokemon = request.form.get('pokenum')
+        datos=consultar(pokemon)
+        print(datos['nombre'])
+    return render_template('/index.html', resultado=datos['nombre'], imagen=datos['foto'])
 
 
 if __name__== '__main__':
