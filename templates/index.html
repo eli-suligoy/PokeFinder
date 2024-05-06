@@ -32,6 +32,7 @@
                     <br>
                     <br>
                     <div class="card" align="center">
+                        <form method="post">
                         <div class="card-header"><h1>PokeFinder</h1></div>
                         <div class="card-body">
                             <h4 class="card-title">Ingresá el Número de Pokémon:</h4>
@@ -52,15 +53,21 @@
         
                             </p>
                         </div>
-                        <div class="card-footer text-muted"><a
+                        <div class="card-footer text-muted">
+                            <button
                             name=""
                             id=""
                             class="btn btn-primary"
                             href="#"
                             role="button"
-                            >Buscar</a
-                        >
+                            type="submit"
+                            >Buscar
+                            </button>
                         </div>
+                        </form>
+                        <h1>{{ resultado }}</h1>
+                        <img src={{ imagen }} alt="">
+                        
                     </div>
 
                 </div>
