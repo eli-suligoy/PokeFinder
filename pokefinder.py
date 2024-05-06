@@ -14,11 +14,15 @@ def css_link(archivocss):
 
 @app.route('/', methods=['POST','GET'])
 def index():
+    nombre=""
+    foto=""
     if request.method == 'POST':
         pokemon = request.form.get('pokenum')
         datos=consultar(pokemon)
+        nombre=datos['nombre']
+        foto=datos['foto']
         print(datos['nombre'])
-    return render_template('/index.html', resultado=datos['nombre'], imagen=datos['foto'])
+    return render_template('/index.html', resultado=nombre, imagen=foto)
 
 
 if __name__== '__main__':
