@@ -14,8 +14,8 @@ def css_link(archivocss):
 
 @app.route('/', methods=['POST','GET'])
 def index():
-    nombre=""
-    foto=""
+    nombre=''
+    foto='static/pokedex.png'
     if request.method == 'POST':
         pokemon = request.form.get('pokenum')
         datos=consultar(pokemon)
