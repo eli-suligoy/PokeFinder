@@ -16,12 +16,15 @@ def css_link(archivocss):
 def index():
     nombre=''
     foto='static/pokedex.png'
-    if request.method == 'POST':
-        pokemon = request.form.get('pokenum')
-        datos=consultar(pokemon)
-        nombre=datos['nombre']
-        foto=datos['foto']
-        print(datos['nombre'])
+    try:
+        if request.method == 'POST':
+            pokemon = request.form.get('pokenum')
+            datos=consultar(pokemon)
+            nombre=datos['nombre']
+            foto=datos['foto']
+            print(datos['nombre'])
+    except:
+        nombre=f"No exite pokemon con ese codigo"      
     return render_template('/index.html', resultado=nombre.title( ), imagen=foto)
 
 
