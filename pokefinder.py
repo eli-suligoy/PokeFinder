@@ -19,12 +19,13 @@ def index():
     try:
         if request.method == 'POST':
             pokemon = request.form.get('pokenum')
-            datos=consultar(pokemon)
+            datos=consultar(pokemon.lower())
             nombre=datos['nombre']
             foto=datos['foto']
             print(datos['nombre'])
     except:
-        nombre=f"No exite pokemon con ese codigo"      
+        nombre=f"No exite pokemon con ese codigo"   
+        foto='static/chibicrying.gif'
     return render_template('/index.html', resultado=nombre.title( ), imagen=foto)
 
 
