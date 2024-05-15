@@ -6,7 +6,7 @@ los datos de Pokemones y devuelve el nombre del mismo junto con una imagen de re
 
 # **Instrucciones de Uso**
 
-Para que funcione se necesita instalar lo siguiente a través de la terminal de Visual Studio Code:
+Para que funcione se debe tener instalado Python y luego se necesita instalar lo siguiente a través de la terminal de Visual Studio Code:
   - pip install Flask
   - pip install requests
 
