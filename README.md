@@ -10,5 +10,5 @@ Para que funcione se debe tener instalado Python y luego se necesita instalar lo
   - pip install Flask
   - pip install requests
 
-Para poder interactuar con la página, se necesita escribir “python pokefinder.py” en la terminal y
+Para poder interactuar con la página, se necesita ingresar “python pokefinder.py” en la terminal y
 seguir el número de IP que aparece allí.
